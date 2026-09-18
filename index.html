@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speakeasy Smokehouse — Saturday BBQ Pre-Orders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<script>
+/* QRCode.js v1.0.0 (MIT License) - inlined for reliability, no external CDN dependency */
+var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this.parsedData=[];for(var b=[],d=0,e=this.data.length;e>d;d++){var f=this.data.charCodeAt(d);f>65536?(b[0]=240|(1835008&f)>>>18,b[1]=128|(258048&f)>>>12,b[2]=128|(4032&f)>>>6,b[3]=128|63&f):f>2048?(b[0]=224|(61440&f)>>>12,b[1]=128|(4032&f)>>>6,b[2]=128|63&f):f>128?(b[0]=192|(1984&f)>>>6,b[1]=128|63&f):b[0]=f,this.parsedData=this.parsedData.concat(b)}this.parsedData.length!=this.data.length&&(this.parsedData.unshift(191),this.parsedData.unshift(187),this.parsedData.unshift(239))}function b(a,b){this.typeNumber=a,this.errorCorrectLevel=b,this.modules=null,this.moduleCount=0,this.dataCache=null,this.dataList=[]}function i(a,b){if(void 0==a.length)throw new Error(a.length+"/"+b);for(var c=0;c<a.length&&0==a[c];)c++;this.num=new Array(a.length-c+b);for(var d=0;d<a.length-c;d++)this.num[d]=a[d+c]}function j(a,b){this.totalCount=a,this.dataCount=b}function k(){this.buffer=[],this.length=0}function m(){return"undefined"!=typeof CanvasRenderingContext2D}function n(){var a=!1,b=navigator.userAgent;return/android/i.test(b)&&(a=!0,aMat=b.toString().match(/android ([0-9]\.[0-9])/i),aMat&&aMat[1]&&(a=parseFloat(aMat[1]))),a}function r(a,b){for(var c=1,e=s(a),f=0,g=l.length;g>=f;f++){var h=0;switch(b){case d.L:h=l[f][0];break;case d.M:h=l[f][1];break;case d.Q:h=l[f][2];break;case d.H:h=l[f][3]}if(h>=e)break;c++}if(c>l.length)throw new Error("Too long data");return c}function s(a){var b=encodeURI(a).toString().replace(/\%[0-9a-fA-F]{2}/g,"a");return b.length+(b.length!=a?3:0)}a.prototype={getLength:function(){return this.parsedData.length},write:function(a){for(var b=0,c=this.parsedData.length;c>b;b++)a.put(this.parsedData[b],8)}},b.prototype={addData:function(b){var c=new a(b);this.dataList.push(c),this.dataCache=null},isDark:function(a,b){if(0>a||this.moduleCount<=a||0>b||this.moduleCount<=b)throw new Error(a+","+b);return this.modules[a][b]},getModuleCount:function(){return this.moduleCount},make:function(){this.makeImpl(!1,this.getBestMaskPattern())},makeImpl:function(a,c){this.moduleCount=4*this.typeNumber+17,this.modules=new Array(this.moduleCount);for(var d=0;d<this.moduleCount;d++){this.modules[d]=new Array(this.moduleCount);for(var e=0;e<this.moduleCount;e++)this.modules[d][e]=null}this.setupPositionProbePattern(0,0),this.setupPositionProbePattern(this.moduleCount-7,0),this.setupPositionProbePattern(0,this.moduleCount-7),this.setupPositionAdjustPattern(),this.setupTimingPattern(),this.setupTypeInfo(a,c),this.typeNumber>=7&&this.setupTypeNumber(a),null==this.dataCache&&(this.dataCache=b.createData(this.typeNumber,this.errorCorrectLevel,this.dataList)),this.mapData(this.dataCache,c)},setupPositionProbePattern:function(a,b){for(var c=-1;7>=c;c++)if(!(-1>=a+c||this.moduleCount<=a+c))for(var d=-1;7>=d;d++)-1>=b+d||this.moduleCount<=b+d||(this.modules[a+c][b+d]=c>=0&&6>=c&&(0==d||6==d)||d>=0&&6>=d&&(0==c||6==c)||c>=2&&4>=c&&d>=2&&4>=d?!0:!1)},getBestMaskPattern:function(){for(var a=0,b=0,c=0;8>c;c++){this.makeImpl(!0,c);var d=f.getLostPoint(this);(0==c||a>d)&&(a=d,b=c)}return b},createMovieClip:function(a,b,c){var d=a.createEmptyMovieClip(b,c),e=1;this.make();for(var f=0;f<this.modules.length;f++)for(var g=f*e,h=0;h<this.modules[f].length;h++){var i=h*e,j=this.modules[f][h];j&&(d.beginFill(0,100),d.moveTo(i,g),d.lineTo(i+e,g),d.lineTo(i+e,g+e),d.lineTo(i,g+e),d.endFill())}return d},setupTimingPattern:function(){for(var a=8;a<this.moduleCount-8;a++)null==this.modules[a][6]&&(this.modules[a][6]=0==a%2);for(var b=8;b<this.moduleCount-8;b++)null==this.modules[6][b]&&(this.modules[6][b]=0==b%2)},setupPositionAdjustPattern:function(){for(var a=f.getPatternPosition(this.typeNumber),b=0;b<a.length;b++)for(var c=0;c<a.length;c++){var d=a[b],e=a[c];if(null==this.modules[d][e])for(var g=-2;2>=g;g++)for(var h=-2;2>=h;h++)this.modules[d+g][e+h]=-2==g||2==g||-2==h||2==h||0==g&&0==h?!0:!1}},setupTypeNumber:function(a){for(var b=f.getBCHTypeNumber(this.typeNumber),c=0;18>c;c++){var d=!a&&1==(1&b>>c);this.modules[Math.floor(c/3)][c%3+this.moduleCount-8-3]=d}for(var c=0;18>c;c++){var d=!a&&1==(1&b>>c);this.modules[c%3+this.moduleCount-8-3][Math.floor(c/3)]=d}},setupTypeInfo:function(a,b){for(var c=this.errorCorrectLevel<<3|b,d=f.getBCHTypeInfo(c),e=0;15>e;e++){var g=!a&&1==(1&d>>e);6>e?this.modules[e][8]=g:8>e?this.modules[e+1][8]=g:this.modules[this.moduleCount-15+e][8]=g}for(var e=0;15>e;e++){var g=!a&&1==(1&d>>e);8>e?this.modules[8][this.moduleCount-e-1]=g:9>e?this.modules[8][15-e-1+1]=g:this.modules[8][15-e-1]=g}this.modules[this.moduleCount-8][8]=!a},mapData:function(a,b){for(var c=-1,d=this.moduleCount-1,e=7,g=0,h=this.moduleCount-1;h>0;h-=2)for(6==h&&h--;;){for(var i=0;2>i;i++)if(null==this.modules[d][h-i]){var j=!1;g<a.length&&(j=1==(1&a[g]>>>e));var k=f.getMask(b,d,h-i);k&&(j=!j),this.modules[d][h-i]=j,e--,-1==e&&(g++,e=7)}if(d+=c,0>d||this.moduleCount<=d){d-=c,c=-c;break}}}},b.PAD0=236,b.PAD1=17,b.createData=function(a,c,d){for(var e=j.getRSBlocks(a,c),g=new k,h=0;h<d.length;h++){var i=d[h];g.put(i.mode,4),g.put(i.getLength(),f.getLengthInBits(i.mode,a)),i.write(g)}for(var l=0,h=0;h<e.length;h++)l+=e[h].dataCount;if(g.getLengthInBits()>8*l)throw new Error("code length overflow. ("+g.getLengthInBits()+">"+8*l+")");for(g.getLengthInBits()+4<=8*l&&g.put(0,4);0!=g.getLengthInBits()%8;)g.putBit(!1);for(;;){if(g.getLengthInBits()>=8*l)break;if(g.put(b.PAD0,8),g.getLengthInBits()>=8*l)break;g.put(b.PAD1,8)}return b.createBytes(g,e)},b.createBytes=function(a,b){for(var c=0,d=0,e=0,g=new Array(b.length),h=new Array(b.length),j=0;j<b.length;j++){var k=b[j].dataCount,l=b[j].totalCount-k;d=Math.max(d,k),e=Math.max(e,l),g[j]=new Array(k);for(var m=0;m<g[j].length;m++)g[j][m]=255&a.buffer[m+c];c+=k;var n=f.getErrorCorrectPolynomial(l),o=new i(g[j],n.getLength()-1),p=o.mod(n);h[j]=new Array(n.getLength()-1);for(var m=0;m<h[j].length;m++){var q=m+p.getLength()-h[j].length;h[j][m]=q>=0?p.get(q):0}}for(var r=0,m=0;m<b.length;m++)r+=b[m].totalCount;for(var s=new Array(r),t=0,m=0;d>m;m++)for(var j=0;j<b.length;j++)m<g[j].length&&(s[t++]=g[j][m]);for(var m=0;e>m;m++)for(var j=0;j<b.length;j++)m<h[j].length&&(s[t++]=h[j][m]);return s};for(var c={MODE_NUMBER:1,MODE_ALPHA_NUM:2,MODE_8BIT_BYTE:4,MODE_KANJI:8},d={L:1,M:0,Q:3,H:2},e={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},f={PATTERN_POSITION_TABLE:[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],G15:1335,G18:7973,G15_MASK:21522,getBCHTypeInfo:function(a){for(var b=a<<10;f.getBCHDigit(b)-f.getBCHDigit(f.G15)>=0;)b^=f.G15<<f.getBCHDigit(b)-f.getBCHDigit(f.G15);return(a<<10|b)^f.G15_MASK},getBCHTypeNumber:function(a){for(var b=a<<12;f.getBCHDigit(b)-f.getBCHDigit(f.G18)>=0;)b^=f.G18<<f.getBCHDigit(b)-f.getBCHDigit(f.G18);return a<<12|b},getBCHDigit:function(a){for(var b=0;0!=a;)b++,a>>>=1;return b},getPatternPosition:function(a){return f.PATTERN_POSITION_TABLE[a-1]},getMask:function(a,b,c){switch(a){case e.PATTERN000:return 0==(b+c)%2;case e.PATTERN001:return 0==b%2;case e.PATTERN010:return 0==c%3;case e.PATTERN011:return 0==(b+c)%3;case e.PATTERN100:return 0==(Math.floor(b/2)+Math.floor(c/3))%2;case e.PATTERN101:return 0==b*c%2+b*c%3;case e.PATTERN110:return 0==(b*c%2+b*c%3)%2;case e.PATTERN111:return 0==(b*c%3+(b+c)%2)%2;default:throw new Error("bad maskPattern:"+a)}},getErrorCorrectPolynomial:function(a){for(var b=new i([1],0),c=0;a>c;c++)b=b.multiply(new i([1,g.gexp(c)],0));return b},getLengthInBits:function(a,b){if(b>=1&&10>b)switch(a){case c.MODE_NUMBER:return 10;case c.MODE_ALPHA_NUM:return 9;case c.MODE_8BIT_BYTE:return 8;case c.MODE_KANJI:return 8;default:throw new Error("mode:"+a)}else if(27>b)switch(a){case c.MODE_NUMBER:return 12;case c.MODE_ALPHA_NUM:return 11;case c.MODE_8BIT_BYTE:return 16;case c.MODE_KANJI:return 10;default:throw new Error("mode:"+a)}else{if(!(41>b))throw new Error("type:"+b);switch(a){case c.MODE_NUMBER:return 14;case c.MODE_ALPHA_NUM:return 13;case c.MODE_8BIT_BYTE:return 16;case c.MODE_KANJI:return 12;default:throw new Error("mode:"+a)}}},getLostPoint:function(a){for(var b=a.getModuleCount(),c=0,d=0;b>d;d++)for(var e=0;b>e;e++){for(var f=0,g=a.isDark(d,e),h=-1;1>=h;h++)if(!(0>d+h||d+h>=b))for(var i=-1;1>=i;i++)0>e+i||e+i>=b||(0!=h||0!=i)&&g==a.isDark(d+h,e+i)&&f++;f>5&&(c+=3+f-5)}for(var d=0;b-1>d;d++)for(var e=0;b-1>e;e++){var j=0;a.isDark(d,e)&&j++,a.isDark(d+1,e)&&j++,a.isDark(d,e+1)&&j++,a.isDark(d+1,e+1)&&j++,(0==j||4==j)&&(c+=3)}for(var d=0;b>d;d++)for(var e=0;b-6>e;e++)a.isDark(d,e)&&!a.isDark(d,e+1)&&a.isDark(d,e+2)&&a.isDark(d,e+3)&&a.isDark(d,e+4)&&!a.isDark(d,e+5)&&a.isDark(d,e+6)&&(c+=40);for(var e=0;b>e;e++)for(var d=0;b-6>d;d++)a.isDark(d,e)&&!a.isDark(d+1,e)&&a.isDark(d+2,e)&&a.isDark(d+3,e)&&a.isDark(d+4,e)&&!a.isDark(d+5,e)&&a.isDark(d+6,e)&&(c+=40);for(var k=0,e=0;b>e;e++)for(var d=0;b>d;d++)a.isDark(d,e)&&k++;var l=Math.abs(100*k/b/b-50)/5;return c+=10*l}},g={glog:function(a){if(1>a)throw new Error("glog("+a+")");return g.LOG_TABLE[a]},gexp:function(a){for(;0>a;)a+=255;for(;a>=256;)a-=255;return g.EXP_TABLE[a]},EXP_TABLE:new Array(256),LOG_TABLE:new Array(256)},h=0;8>h;h++)g.EXP_TABLE[h]=1<<h;for(var h=8;256>h;h++)g.EXP_TABLE[h]=g.EXP_TABLE[h-4]^g.EXP_TABLE[h-5]^g.EXP_TABLE[h-6]^g.EXP_TABLE[h-8];for(var h=0;255>h;h++)g.LOG_TABLE[g.EXP_TABLE[h]]=h;i.prototype={get:function(a){return this.num[a]},getLength:function(){return this.num.length},multiply:function(a){for(var b=new Array(this.getLength()+a.getLength()-1),c=0;c<this.getLength();c++)for(var d=0;d<a.getLength();d++)b[c+d]^=g.gexp(g.glog(this.get(c))+g.glog(a.get(d)));return new i(b,0)},mod:function(a){if(this.getLength()-a.getLength()<0)return this;for(var b=g.glog(this.get(0))-g.glog(a.get(0)),c=new Array(this.getLength()),d=0;d<this.getLength();d++)c[d]=this.get(d);for(var d=0;d<a.getLength();d++)c[d]^=g.gexp(g.glog(a.get(d))+b);return new i(c,0).mod(a)}},j.RS_BLOCK_TABLE=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],j.getRSBlocks=function(a,b){var c=j.getRsBlockTable(a,b);if(void 0==c)throw new Error("bad rs block @ typeNumber:"+a+"/errorCorrectLevel:"+b);for(var d=c.length/3,e=[],f=0;d>f;f++)for(var g=c[3*f+0],h=c[3*f+1],i=c[3*f+2],k=0;g>k;k++)e.push(new j(h,i));return e},j.getRsBlockTable=function(a,b){switch(b){case d.L:return j.RS_BLOCK_TABLE[4*(a-1)+0];case d.M:return j.RS_BLOCK_TABLE[4*(a-1)+1];case d.Q:return j.RS_BLOCK_TABLE[4*(a-1)+2];case d.H:return j.RS_BLOCK_TABLE[4*(a-1)+3];default:return void 0}},k.prototype={get:function(a){var b=Math.floor(a/8);return 1==(1&this.buffer[b]>>>7-a%8)},put:function(a,b){for(var c=0;b>c;c++)this.putBit(1==(1&a>>>b-c-1))},getLengthInBits:function(){return this.length},putBit:function(a){var b=Math.floor(this.length/8);this.buffer.length<=b&&this.buffer.push(0),a&&(this.buffer[b]|=128>>>this.length%8),this.length++}};var l=[[17,14,11,7],[32,26,20,14],[53,42,32,24],[78,62,46,34],[106,84,60,44],[134,106,74,58],[154,122,86,64],[192,152,108,84],[230,180,130,98],[271,213,151,119],[321,251,177,137],[367,287,203,155],[425,331,241,177],[458,362,258,194],[520,412,292,220],[586,450,322,250],[644,504,364,280],[718,560,394,310],[792,624,442,338],[858,666,482,382],[929,711,509,403],[1003,779,565,439],[1091,857,611,461],[1171,911,661,511],[1273,997,715,535],[1367,1059,751,593],[1465,1125,805,625],[1528,1190,868,658],[1628,1264,908,698],[1732,1370,982,742],[1840,1452,1030,790],[1952,1538,1112,842],[2068,1628,1168,898],[2188,1722,1228,958],[2303,1809,1283,983],[2431,1911,1351,1051],[2563,1989,1423,1093],[2699,2099,1499,1139],[2809,2213,1579,1219],[2953,2331,1663,1273]],o=function(){var a=function(a,b){this._el=a,this._htOption=b};return a.prototype.draw=function(a){function g(a,b){var c=document.createElementNS("http://www.w3.org/2000/svg",a);for(var d in b)b.hasOwnProperty(d)&&c.setAttribute(d,b[d]);return c}var b=this._htOption,c=this._el,d=a.getModuleCount();Math.floor(b.width/d),Math.floor(b.height/d),this.clear();var h=g("svg",{viewBox:"0 0 "+String(d)+" "+String(d),width:"100%",height:"100%",fill:b.colorLight});h.setAttributeNS("http://www.w3.org/2000/xmlns/","xmlns:xlink","http://www.w3.org/1999/xlink"),c.appendChild(h),h.appendChild(g("rect",{fill:b.colorDark,width:"1",height:"1",id:"template"}));for(var i=0;d>i;i++)for(var j=0;d>j;j++)if(a.isDark(i,j)){var k=g("use",{x:String(i),y:String(j)});k.setAttributeNS("http://www.w3.org/1999/xlink","href","#template"),h.appendChild(k)}},a.prototype.clear=function(){for(;this._el.hasChildNodes();)this._el.removeChild(this._el.lastChild)},a}(),p="svg"===document.documentElement.tagName.toLowerCase(),q=p?o:m()?function(){function a(){this._elImage.src=this._elCanvas.toDataURL("image/png"),this._elImage.style.display="block",this._elCanvas.style.display="none"}function d(a,b){var c=this;if(c._fFail=b,c._fSuccess=a,null===c._bSupportDataURI){var d=document.createElement("img"),e=function(){c._bSupportDataURI=!1,c._fFail&&_fFail.call(c)},f=function(){c._bSupportDataURI=!0,c._fSuccess&&c._fSuccess.call(c)};return d.onabort=e,d.onerror=e,d.onload=f,d.src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",void 0}c._bSupportDataURI===!0&&c._fSuccess?c._fSuccess.call(c):c._bSupportDataURI===!1&&c._fFail&&c._fFail.call(c)}if(this._android&&this._android<=2.1){var b=1/window.devicePixelRatio,c=CanvasRenderingContext2D.prototype.drawImage;CanvasRenderingContext2D.prototype.drawImage=function(a,d,e,f,g,h,i,j){if("nodeName"in a&&/img/i.test(a.nodeName))for(var l=arguments.length-1;l>=1;l--)arguments[l]=arguments[l]*b;else"undefined"==typeof j&&(arguments[1]*=b,arguments[2]*=b,arguments[3]*=b,arguments[4]*=b);c.apply(this,arguments)}}var e=function(a,b){this._bIsPainted=!1,this._android=n(),this._htOption=b,this._elCanvas=document.createElement("canvas"),this._elCanvas.width=b.width,this._elCanvas.height=b.height,a.appendChild(this._elCanvas),this._el=a,this._oContext=this._elCanvas.getContext("2d"),this._bIsPainted=!1,this._elImage=document.createElement("img"),this._elImage.style.display="none",this._el.appendChild(this._elImage),this._bSupportDataURI=null};return e.prototype.draw=function(a){var b=this._elImage,c=this._oContext,d=this._htOption,e=a.getModuleCount(),f=d.width/e,g=d.height/e,h=Math.round(f),i=Math.round(g);b.style.display="none",this.clear();for(var j=0;e>j;j++)for(var k=0;e>k;k++){var l=a.isDark(j,k),m=k*f,n=j*g;c.strokeStyle=l?d.colorDark:d.colorLight,c.lineWidth=1,c.fillStyle=l?d.colorDark:d.colorLight,c.fillRect(m,n,f,g),c.strokeRect(Math.floor(m)+.5,Math.floor(n)+.5,h,i),c.strokeRect(Math.ceil(m)-.5,Math.ceil(n)-.5,h,i)}this._bIsPainted=!0},e.prototype.makeImage=function(){this._bIsPainted&&d.call(this,a)},e.prototype.isPainted=function(){return this._bIsPainted},e.prototype.clear=function(){this._oContext.clearRect(0,0,this._elCanvas.width,this._elCanvas.height),this._bIsPainted=!1},e.prototype.round=function(a){return a?Math.floor(1e3*a)/1e3:a},e}():function(){var a=function(a,b){this._el=a,this._htOption=b};return a.prototype.draw=function(a){for(var b=this._htOption,c=this._el,d=a.getModuleCount(),e=Math.floor(b.width/d),f=Math.floor(b.height/d),g=['<table style="border:0;border-collapse:collapse;">'],h=0;d>h;h++){g.push("<tr>");for(var i=0;d>i;i++)g.push('<td style="border:0;border-collapse:collapse;padding:0;margin:0;width:'+e+"px;height:"+f+"px;background-color:"+(a.isDark(h,i)?b.colorDark:b.colorLight)+';"></td>');g.push("</tr>")}g.push("</table>"),c.innerHTML=g.join("");var j=c.childNodes[0],k=(b.width-j.offsetWidth)/2,l=(b.height-j.offsetHeight)/2;k>0&&l>0&&(j.style.margin=l+"px "+k+"px")},a.prototype.clear=function(){this._el.innerHTML=""},a}();QRCode=function(a,b){if(this._htOption={width:256,height:256,typeNumber:4,colorDark:"#000000",colorLight:"#ffffff",correctLevel:d.H},"string"==typeof b&&(b={text:b}),b)for(var c in b)this._htOption[c]=b[c];"string"==typeof a&&(a=document.getElementById(a)),this._android=n(),this._el=a,this._oQRCode=null,this._oDrawing=new q(this._el,this._htOption),this._htOption.text&&this.makeCode(this._htOption.text)},QRCode.prototype.makeCode=function(a){this._oQRCode=new b(r(a,this._htOption.correctLevel),this._htOption.correctLevel),this._oQRCode.addData(a),this._oQRCode.make(),this._el.title=a,this._oDrawing.draw(this._oQRCode),this.makeImage()},QRCode.prototype.makeImage=function(){"function"==typeof this._oDrawing.makeImage&&(!this._android||this._android>=3)&&this._oDrawing.makeImage()},QRCode.prototype.clear=function(){this._oDrawing.clear()},QRCode.CorrectLevel=d}();
+</script>
+<style>
+
+  :root{
+    --charcoal-950:#0B0F0C;
+    --charcoal-900:#0F1611;
+    --charcoal-800:#14231C;
+    --charcoal-700:#1C3226;
+    --ember-600:#7A1E2C;
+    --ember-500:#9C2B3A;
+    --brass-500:#C9A227;
+    --brass-300:#E8C766;
+    --paper-100:#F2E9D8;
+    --paper-200:#EADFC7;
+    --smoke-300:#AABBAF;
+    --smoke-400:#7E9084;
+    --ink:#12201A;
+    --ok-600:#4C7A4A;
+    --danger-600:#B23B2E;
+
+    --bg: var(--charcoal-950);
+    --surface: var(--charcoal-800);
+    --surface-raised: var(--charcoal-700);
+    --text-primary: var(--paper-100);
+    --text-muted: var(--smoke-300);
+    --accent: var(--ember-500);
+    --accent-strong: var(--ember-600);
+    --gold: var(--brass-500);
+    --paper: var(--paper-100);
+    --paper-ink: var(--ink);
+    --line: rgba(242,233,216,0.14);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: var(--charcoal-950);
+      --surface: var(--charcoal-800);
+      --surface-raised: var(--charcoal-700);
+      --text-primary: var(--paper-100);
+      --text-muted: var(--smoke-300);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: var(--charcoal-950);
+    --surface: var(--charcoal-800);
+    --surface-raised: var(--charcoal-700);
+    --text-primary: var(--paper-100);
+    --text-muted: var(--smoke-300);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text-primary);
+    font-family:'Libre Franklin', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--ember-600); color:var(--paper-100); }
+
+  h1,h2,h3,.display{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    letter-spacing:0.01em;
+    line-height:1.05;
+    margin:0;
+    color:var(--paper-100);
+  }
+  a{color:inherit;}
+  button{font-family:inherit;}
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:40;
+    background:rgba(27,23,20,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:66px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:'Cinzel Decorative',serif; font-weight:700; font-size:19px; white-space:nowrap; }
+  .brand-mark{ width:30px;height:30px; border-radius:50%; background:conic-gradient(from 220deg, var(--ember-600), var(--brass-500), var(--ember-600)); flex:none; }
+  .nav-links{ display:flex; gap:28px; font-size:14.5px; color:var(--text-muted); }
+  .nav-links a{ text-decoration:none; }
+  .nav-links a:hover{ color:var(--paper-100); }
+  .nav-cta{
+    background:var(--accent-strong); color:var(--paper-100); border:none;
+    padding:10px 18px; border-radius:3px; font-weight:700; font-size:14px;
+    cursor:pointer; letter-spacing:0.02em; white-space:nowrap;
+  }
+  .nav-cta:hover{ background:var(--ember-500); }
+  @media (max-width:820px){ .nav-links{ display:none; } }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:76px 0 64px;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(196,62,28,0.28), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 10%, rgba(200,145,43,0.16), transparent 60%),
+      var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{ display:grid; grid-template-columns:1.25fr 0.95fr; gap:56px; align-items:end; }
+  @media (max-width:900px){ .hero .wrap{ grid-template-columns:1fr; } }
+
+  .kicker{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--gold); font-weight:600; font-size:14.5px; margin-bottom:18px;
+  }
+  .kicker::before{ content:""; width:7px;height:7px;border-radius:50%; background:var(--gold); }
+
+  .hero h1{ font-size:clamp(44px, 7.6vw, 88px); }
+  .hero h1 em{ font-style:normal; color:var(--accent); }
+  .hero-sub{ margin-top:22px; max-width:46ch; color:var(--text-muted); font-size:17.5px; }
+
+  .hero-actions{ margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 26px; border-radius:3px; font-weight:700; font-size:15px;
+    text-decoration:none; cursor:pointer; border:1px solid transparent; letter-spacing:0.01em;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-primary{ background:var(--accent-strong); color:var(--paper-100); }
+  .btn-primary:hover{ background:var(--ember-500); }
+  .btn-ghost{ background:transparent; color:var(--paper-100); border-color:var(--line); }
+  .btn-ghost:hover{ border-color:var(--smoke-300); }
+  .btn-gold{ background:var(--gold); color:var(--charcoal-950); }
+  .btn-gold:hover{ background:var(--brass-300); }
+  .btn[disabled]{ opacity:0.4; cursor:not-allowed; }
+  .btn-block{ width:100%; }
+  .btn-sm{ padding:9px 16px; font-size:13.5px; }
+
+  .hero-card{
+    background:var(--paper); color:var(--paper-ink); border-radius:4px;
+    padding:26px 26px 22px; position:relative;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
+  }
+  .hero-card .tag{ font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.08em; color:var(--ember-600); }
+  .hero-card h3{ color:var(--paper-ink); font-size:28px; margin-top:6px; }
+  .hero-card p{ color:#5b4f43; font-size:14.5px; margin:10px 0 0; }
+  .hero-slots{ margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .slot-pill{ border:1px solid #d9cbb0; border-radius:3px; padding:8px 10px; font-size:13px; font-family:'Space Mono',monospace; color:#5b4f43; }
+
+  /* ---------- Section shell ---------- */
+  section{ padding:84px 0; border-bottom:1px solid var(--line); }
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:44px; flex-wrap:wrap; }
+  .section-head h2{ font-size:clamp(32px,4.4vw,50px); }
+  .section-head p{ color:var(--text-muted); max-width:44ch; font-size:15.5px; margin-top:10px; }
+  .step-label{ font-family:'Space Mono',monospace; font-size:13px; color:var(--gold); margin-bottom:10px; }
+
+  /* ---------- Menu reference: 1920s speakeasy theme ---------- */
+  #menu{
+    --deco-black:#0B0F0C;
+    --deco-emerald:#0E241C;
+    --deco-emerald-light:#153427;
+    --deco-gold:#C9A227;
+    --deco-gold-light:#E8C766;
+    --deco-cream:#F2E9D8;
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, rgba(201,162,39,0.10), transparent 60%),
+      linear-gradient(180deg, var(--deco-black), #08100C);
+  }
+  #menu .step-label{ color:var(--deco-gold-light); }
+  #menu .section-head h2{
+    font-family:'Cinzel Decorative', serif; font-weight:700; letter-spacing:0.01em;
+    color:var(--deco-gold-light); text-shadow:0 0 22px rgba(201,162,39,0.25);
+  }
+  #menu .section-head p{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:17px; color:#B7C4BB; }
+  .deco-divider{
+    width:100%; max-width:340px; height:14px; margin:0 0 28px;
+    background-image:
+      linear-gradient(45deg, var(--deco-gold) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--deco-gold) 25%, transparent 25%);
+    background-size:14px 14px; background-position:0 0;
+    opacity:0.8;
+  }
+  #menu .deco-frame{
+    border:3px double var(--deco-gold); border-radius:2px;
+    padding:36px 30px 30px; position:relative;
+    background:rgba(0,0,0,0.15);
+  }
+  #menu .deco-frame::before, #menu .deco-frame::after,
+  #menu .deco-frame .corner-br, #menu .deco-frame .corner-bl{
+    content:""; position:absolute; width:22px; height:22px;
+    border-top:2px solid var(--deco-gold-light); border-left:2px solid var(--deco-gold-light);
+  }
+  #menu .deco-frame::before{ top:-3px; left:-3px; }
+  #menu .deco-frame::after{ top:-3px; right:-3px; transform:rotate(90deg); }
+  #menu .deco-frame .corner-bl{ bottom:-3px; left:-3px; transform:rotate(-90deg); }
+  #menu .deco-frame .corner-br{ bottom:-3px; right:-3px; transform:rotate(180deg); }
+
+  .menu-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+  @media (max-width:940px){ .menu-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .menu-grid{ grid-template-columns:1fr; } }
+  .menu-panel{
+    background:linear-gradient(180deg, var(--deco-emerald-light), var(--deco-emerald));
+    border:1px solid var(--deco-gold); border-radius:2px; padding:28px 26px 12px;
+    box-shadow:0 20px 40px -24px rgba(0,0,0,0.7);
+  }
+  .menu-panel h3{
+    font-family:'Cinzel Decorative', serif; font-weight:700; font-size:19px;
+    color:var(--deco-gold-light); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:8px;
+  }
+  .menu-panel .note{ font-family:'Cormorant Garamond', serif; font-style:italic; color:#9FB0A5; font-size:14.5px; margin-bottom:16px; }
+  .menu-row{ display:flex; justify-content:space-between; gap:14px; padding:13px 0; border-top:1px solid rgba(201,162,39,0.25); font-size:14.5px; font-family:'Cormorant Garamond', serif; }
+  .menu-row:first-of-type{ border-top:none; }
+  .menu-row .name{ font-weight:600; color:var(--deco-cream); font-size:16.5px; }
+  .menu-row .desc{ color:#8FA096; font-size:13px; margin-top:2px; font-style:italic; }
+  .menu-row .price{ font-family:'Cormorant Garamond', serif; font-weight:700; font-style:italic; color:var(--deco-gold-light); white-space:nowrap; font-size:17px; }
+  .badge-row{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:26px; }
+  .no-pork-badge{
+    display:inline-flex; align-items:center; gap:8px; background:rgba(201,162,39,0.1);
+    border:1px solid var(--deco-gold); color:var(--deco-gold-light); padding:8px 16px;
+    border-radius:0; font-family:'Cormorant Garamond', serif; font-weight:600; font-style:italic;
+    font-size:14px; letter-spacing:0.03em; margin-bottom:0;
+  }
+
+  .menu-qr-row{ display:flex; gap:24px; margin-top:30px; flex-wrap:wrap; justify-content:center; }
+  .menu-qr-card{
+    background:linear-gradient(180deg, var(--deco-emerald-light), var(--deco-emerald));
+    border:1px solid var(--deco-gold); border-radius:2px;
+    padding:30px 26px; text-align:center; flex:1; min-width:220px; position:relative;
+  }
+  .menu-qr-badge{
+    position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+    width:32px; height:32px; border-radius:50%; background:var(--deco-gold);
+    display:flex; align-items:center; justify-content:center; font-size:15px;
+    box-shadow:0 6px 14px -4px rgba(0,0,0,0.6);
+  }
+  .menu-qr-tag{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:13px; letter-spacing:0.06em; color:var(--deco-gold-light); margin-top:6px; }
+  .menu-qr-heading{ font-family:'Cinzel Decorative', serif; font-weight:700; font-size:21px; color:var(--deco-cream); margin:8px 0 20px; }
+  .menu-qr-frame{
+    background:#ffffff; border-radius:4px; padding:16px; display:inline-flex;
+    box-shadow:0 16px 34px -16px rgba(0,0,0,0.6); border:2px solid var(--deco-gold);
+  }
+  .menu-qr-frame .poster-qr{ margin-bottom:0; }
+  .menu-qr-frame .poster-qr img, .menu-qr-frame .poster-qr canvas{ width:170px; height:170px; display:block; }
+  .menu-qr-label{ margin-top:16px; font-size:13.5px; font-family:'Cormorant Garamond', serif; font-style:italic; color:#9FB0A5; }
+
+  /* ---------- Builder ---------- */
+  .mode-tabs{ display:flex; gap:10px; margin-bottom:30px; }
+  .mode-tab{
+    background:transparent; border:1px solid var(--line); color:var(--text-muted);
+    padding:12px 22px; border-radius:30px; cursor:pointer; font-size:14.5px; font-weight:700;
+  }
+  .mode-tab.active{ background:var(--accent-strong); border-color:var(--accent-strong); color:var(--paper-100); }
+
+  .builder{ display:grid; grid-template-columns:1.5fr 1fr; gap:32px; align-items:start; }
+  @media (max-width:940px){ .builder{ grid-template-columns:1fr; } }
+
+  .box-tabs{ display:flex; gap:10px; margin-bottom:26px; flex-wrap:wrap; }
+  .box-tab{
+    background:var(--surface); border:1px solid var(--line); color:var(--text-muted);
+    padding:12px 18px; border-radius:3px; cursor:pointer; font-size:14.5px; font-weight:600;
+  }
+  .box-tab.active{ background:var(--surface-raised); border-color:var(--accent); color:var(--paper-100); }
+
+  .box-editor{ background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:28px; }
+  .box-editor-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:6px; }
+  .box-editor-head h3{ font-size:26px; }
+  .box-editor-head .serves{ color:var(--text-muted); font-size:13px; margin-top:4px; }
+  .box-price{ font-family:'Space Mono',monospace; color:var(--brass-300); font-size:20px; white-space:nowrap; }
+  .box-editor-desc{ color:var(--text-muted); font-size:14.5px; margin-bottom:22px; }
+
+  .fixed-list{ list-style:none; margin:0 0 22px; padding:0; }
+  .fixed-list li{ padding:9px 0; border-top:1px solid var(--line); font-size:14.5px; color:var(--paper-200); }
+  .fixed-list li:first-child{ border-top:none; }
+
+  .pick-group{ margin-bottom:22px; }
+  .pick-group-title{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; }
+  .pick-group-title h4{ font-size:15px; text-transform:none; font-weight:700; color:var(--paper-100); margin:0; }
+  .pick-count{ font-family:'Space Mono',monospace; font-size:13px; color:var(--text-muted); }
+  .pick-count.full{ color:var(--ok-600); }
+  .pick-list{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media (max-width:520px){ .pick-list{ grid-template-columns:1fr; } }
+
+  .pick-item{
+    display:flex; align-items:center; gap:10px;
+    border:1px solid var(--line); border-radius:3px; padding:10px 12px;
+    cursor:pointer; font-size:13.5px; background:var(--charcoal-900);
+    user-select:none;
+  }
+  .pick-item.selected{ border-color:var(--accent); background:rgba(196,62,28,0.14); }
+  .pick-item.disabled{ opacity:0.35; cursor:not-allowed; }
+  .pick-check{ width:16px;height:16px; border-radius:3px; border:1.5px solid var(--smoke-400); flex:none; }
+  .pick-item.selected .pick-check{ border-color:var(--accent); background:var(--accent); position:relative; }
+  .pick-item.selected .pick-check::after{ content:""; position:absolute; left:4px; top:1px; width:4px; height:8px; border:solid white; border-width:0 2px 2px 0; transform:rotate(45deg); }
+
+  .qty-row{ display:flex; align-items:center; justify-content:space-between; margin-top:24px; padding-top:20px; border-top:1px solid var(--line); flex-wrap:wrap; gap:14px; }
+  .qty-control{ display:flex; align-items:center; gap:14px; }
+  .qty-btn{ width:34px;height:34px; border-radius:3px; border:1px solid var(--line); background:var(--charcoal-900); color:var(--paper-100); font-size:18px; cursor:pointer; }
+  .qty-num{ font-family:'Space Mono',monospace; font-size:17px; min-width:20px; text-align:center; }
+
+  /* ---------- Ticket / cart ---------- */
+  .ticket{
+    background:var(--paper); color:var(--paper-ink); border-radius:4px;
+    padding:0; position:sticky; top:90px;
+    box-shadow:0 24px 50px -22px rgba(0,0,0,0.5);
+  }
+  .ticket-head{ padding:22px 24px 14px; border-bottom:1px dashed #c9bb9c; }
+  .ticket-head .tag{ font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.06em; color:var(--ember-600); }
+  .ticket-head h3{ color:var(--paper-ink); font-size:24px; margin-top:4px; }
+  .ticket-body{ padding:16px 24px; max-height:340px; overflow-y:auto; }
+  .ticket-empty{ color:#8a7c69; font-size:14px; padding:14px 0; }
+  .ticket-line{ padding:14px 0; border-bottom:1px solid #e6dac0; }
+  .ticket-line:last-child{ border-bottom:none; }
+  .ticket-line-top{ display:flex; justify-content:space-between; gap:10px; font-weight:700; font-size:15px; }
+  .ticket-line-items{ font-size:12.5px; color:#6a5d4e; margin-top:4px; line-height:1.5; }
+  .ticket-line-actions{ display:flex; gap:14px; margin-top:8px; }
+  .ticket-line-actions button{ background:none; border:none; padding:0; font-size:12.5px; color:#8a5a34; text-decoration:underline; cursor:pointer; font-family:inherit; }
+  .ticket-foot{ padding:18px 24px 24px; border-top:1px dashed #c9bb9c; }
+  .ticket-total{ display:flex; justify-content:space-between; font-family:'Space Mono',monospace; font-size:19px; font-weight:700; margin-bottom:16px; }
+
+  /* ---------- Checkout ---------- */
+  .checkout-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:600px){ .checkout-grid{ grid-template-columns:1fr; } }
+  .field{ display:flex; flex-direction:column; gap:7px; margin-bottom:16px; }
+  .field label{ font-size:13px; color:var(--text-muted); font-weight:600; }
+  .field input, .field select, .field textarea{
+    background:var(--charcoal-900); border:1px solid var(--line); color:var(--paper-100);
+    padding:12px 13px; border-radius:3px; font-size:14.5px; font-family:inherit;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent); }
+  .field-error{ font-size:12.5px; color:#ff9d85; min-height:15px; }
+  .field.invalid input, .field.invalid select{ border-color:var(--danger-600); }
+
+  .contact-pref{ display:flex; gap:10px; margin-bottom:20px; }
+  .pref-opt{ flex:1; border:1px solid var(--line); border-radius:3px; padding:12px; text-align:center; cursor:pointer; font-size:13.5px; font-weight:600; color:var(--text-muted); }
+  .pref-opt.active{ border-color:var(--gold); color:var(--paper-100); background:rgba(200,145,43,0.1); }
+
+  .form-msg{ font-size:13.5px; color:#ff9d85; margin-top:6px; min-height:18px; }
+
+  /* ---------- Confirmation ---------- */
+  .confirm-overlay{
+    position:fixed; inset:0; background:rgba(15,12,10,0.72); backdrop-filter:blur(3px);
+    display:none; align-items:center; justify-content:center; z-index:100; padding:24px;
+  }
+  .confirm-overlay.open{ display:flex; }
+  .confirm-card{
+    background:var(--paper); color:var(--paper-ink); max-width:460px; width:100%;
+    border-radius:6px; padding:32px; max-height:88vh; overflow-y:auto;
+    box-shadow:0 40px 80px -20px rgba(0,0,0,0.6);
+  }
+  .confirm-card h3{ color:var(--paper-ink); font-size:30px; }
+  .confirm-id{ font-family:'Space Mono',monospace; font-size:13px; color:var(--ember-600); margin-top:6px; }
+  .confirm-qr{ display:flex; justify-content:center; margin:22px 0; padding:18px; background:white; border-radius:4px; border:1px solid #e6dac0; }
+  .confirm-detail{ font-size:13.5px; color:#5b4f43; line-height:1.7; margin-bottom:18px; }
+  .confirm-detail strong{ color:var(--paper-ink); }
+  .confirm-actions{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
+  .confirm-note{ font-size:12px; color:#8a7c69; margin-top:16px; line-height:1.5; }
+  .confirm-close{ position:sticky; bottom:0; margin-top:18px; }
+
+  /* ---------- Poster / scan-to-order ---------- */
+  .poster-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+  @media (max-width:840px){ .poster-wrap{ grid-template-columns:1fr; } }
+  .poster{
+    background:var(--paper); color:var(--paper-ink); border-radius:6px;
+    padding:40px; text-align:center; box-shadow:0 30px 60px -22px rgba(0,0,0,0.55);
+  }
+  .poster .tag{ font-family:'Space Mono',monospace; font-size:13px; color:var(--ember-600); letter-spacing:0.08em; }
+  .poster h3{ color:var(--paper-ink); font-size:34px; margin:8px 0 20px; }
+  .poster-qr{ display:flex; justify-content:center; margin-bottom:20px; }
+  .poster-foot{ font-size:13px; color:#6a5d4e; }
+
+  .sticker-card{
+    background:var(--paper); color:var(--paper-ink); border-radius:16px;
+    padding:32px 30px; text-align:center; max-width:320px;
+    box-shadow:0 30px 60px -22px rgba(0,0,0,0.55);
+    border:3px solid var(--charcoal-950);
+  }
+  .sticker-mark{ width:34px; height:34px; border-radius:50%; margin:0 auto 10px; background:conic-gradient(from 220deg, var(--ember-600), var(--brass-500), var(--ember-600)); }
+  .sticker-card .tag{ font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.08em; color:var(--ember-600); }
+  .sticker-card h3{ color:var(--paper-ink); font-size:24px; margin:6px 0 16px; }
+  .sticker-card .poster-qr{ margin-bottom:14px; }
+  .sticker-card .poster-foot{ font-size:12px; }
+
+  footer{ padding:40px 0 60px; }
+  .foot-row{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; color:var(--text-muted); font-size:13.5px; }
+
+  @media print{
+    body *{ visibility:hidden; }
+    .print-active, .print-active *{ visibility:visible; }
+    .print-active{ position:absolute; top:0; left:0; width:100%; display:flex !important; justify-content:center; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark"></span>Speakeasy Smokehouse</div>
+    <div class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#build">Order</a>
+      <a href="#poster">Scan to order</a>
+      <a href="#promo">Promo QR</a>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('build').scrollIntoView({behavior:'smooth'})">Pre-order</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Open Saturdays only · pre-order required</div>
+      <h1>Low &amp; slow.<br><em>Zero pork,</em> ever.</h1>
+      <p class="hero-sub">Beef, lamb, chicken and fish, smoked overnight and pulled fresh every Saturday morning. Build a box, grab a sharing platter, and skip the line — just bring your QR code.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="document.getElementById('build').scrollIntoView({behavior:'smooth'})">Start your order</button>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="tag">THIS SATURDAY</div>
+      <h3 id="heroDate">—</h3>
+      <p>Collection at the smokehouse window. Last orders Thursday — the brisket and ribs go on the smoker Friday night.</p>
+      <div class="hero-slots">
+        <div class="slot-pill">11:00–11:30</div>
+        <div class="slot-pill">12:30–13:00</div>
+        <div class="slot-pill">14:00–14:30</div>
+        <div class="slot-pill">15:30–16:00</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="step-label">The board</div>
+        <h2>Everything on the smoker</h2>
+        <div class="deco-divider"></div>
+        <p>No pork or pork-derived ingredients anywhere in the kitchen — not in the meat, the sides, or the sauce.</p>
+      </div>
+    </div>
+    <div class="deco-frame">
+      <span class="corner-bl"></span><span class="corner-br"></span>
+      <div class="badge-row">
+        <span class="no-pork-badge">100% pork-free kitchen</span>
+        <span class="no-pork-badge">Level 1 &amp; 2 Food Hygiene &amp; Safety Certified</span>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-panel">
+          <h3>Mains</h3>
+          <div class="note">Also the building blocks of every box deal</div>
+          <div id="mainList"></div>
+        </div>
+        <div class="menu-panel">
+          <h3>Sides</h3>
+          <div class="note">Made fresh each Saturday morning</div>
+          <div id="sideList"></div>
+        </div>
+        <div class="menu-panel">
+          <h3>Sauces &amp; Extras</h3>
+          <div class="note">Add to any box or platter</div>
+          <div id="sauceList"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-qr-row print-target" id="menuQrPrintArea">
+      <div class="menu-qr-card" style="max-width:280px; margin:0 auto;">
+        <div class="menu-qr-badge">🔥</div>
+        <div class="menu-qr-tag">Order ahead online</div>
+        <div class="menu-qr-heading">Scan to pre-order</div>
+        <div class="menu-qr-frame"><div class="poster-qr" id="menuSiteQr"></div></div>
+        <div class="menu-qr-label">Takes you straight to checkout</div>
+      </div>
+    </div>
+    <div style="text-align:center; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <button class="btn btn-ghost" style="margin-top:16px;" onclick="printOnly('menuQrPrintArea')">Print this QR code</button>
+      <button class="btn btn-ghost" style="margin-top:16px;" onclick="downloadQr({qrHolderId:'menuSiteQr', filename:'speakeasy-smokehouse-order-qr.png', heading:'Scan to pre-order', sub:'Order ahead for Saturday pickup'})">Download QR (PNG)</button>
+    </div>
+  </div>
+</section>
+
+<section id="build">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="step-label">Step 1 · Build your order</div>
+        <h2>Boxes &amp; sharing platters</h2>
+        <p>Customise a box for yourself, or add one of our ready-made sharing platters. Mix and match as many as you like.</p>
+      </div>
+    </div>
+
+    <div class="mode-tabs">
+      <button class="mode-tab active" id="modeBoxBtn" onclick="switchMode('box')">Box Deals</button>
+      <button class="mode-tab" id="modePlatterBtn" onclick="switchMode('platter')">Share Platters</button>
+    </div>
+
+    <div class="builder">
+      <div>
+        <div id="boxMode">
+          <div class="box-tabs" id="boxTabs"></div>
+          <div class="box-editor" id="boxEditor"></div>
+        </div>
+        <div id="platterMode" style="display:none;">
+          <div class="box-tabs" id="platterTabs"></div>
+          <div class="box-editor" id="platterEditor"></div>
+        </div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="tag">ORDER TICKET</div>
+          <h3>Your order</h3>
+        </div>
+        <div class="ticket-body" id="ticketBody">
+          <div class="ticket-empty">Nothing added yet — build a box or add a platter.</div>
+        </div>
+        <div class="ticket-foot">
+          <div class="ticket-total"><span>Total</span><span id="ticketTotal">£0.00</span></div>
+          <button class="btn btn-primary btn-block" id="toCheckoutBtn" onclick="goToCheckout()" disabled>Continue to details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkout">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="step-label">Step 2 · Your details</div>
+        <h2>Your details &amp; pickup</h2>
+        <p>We'll attach your QR code to this order — show it at the window on Saturday.</p>
+      </div>
+    </div>
+
+    <div class="builder">
+      <div>
+        <div class="checkout-grid">
+          <div class="field" id="f-name">
+            <label for="custName">Full name</label>
+            <input id="custName" type="text" placeholder="Jordan Lee">
+            <div class="field-error"></div>
+          </div>
+          <div class="field" id="f-phone">
+            <label for="custPhone">Phone number</label>
+            <input id="custPhone" type="tel" placeholder="07700 900000">
+            <div class="field-error"></div>
+          </div>
+        </div>
+        <div class="field" id="f-email">
+          <label for="custEmail">Email (optional)</label>
+          <input id="custEmail" type="email" placeholder="jordan@example.com">
+          <div class="field-error"></div>
+        </div>
+
+        <div class="field" id="f-slot">
+          <label for="pickupSlot">Pickup slot (Saturday)</label>
+          <select id="pickupSlot">
+            <option value="">Choose a time</option>
+            <option>11:00–11:30</option>
+            <option>11:30–12:00</option>
+            <option>12:30–13:00</option>
+            <option>13:00–13:30</option>
+            <option>14:00–14:30</option>
+            <option>15:30–16:00</option>
+          </select>
+          <div class="field-error"></div>
+        </div>
+
+        <div class="field">
+          <label for="custNotes">Notes for the kitchen (optional)</label>
+          <textarea id="custNotes" rows="2" placeholder="Extra napkins, allergy info, etc."></textarea>
+        </div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-head">
+          <div class="tag">SUMMARY</div>
+          <h3>Confirm &amp; pay at collection</h3>
+        </div>
+        <div class="ticket-body" id="checkoutSummary"></div>
+        <div class="ticket-foot">
+          <div class="ticket-total"><span>Total due at pickup</span><span id="checkoutTotal">£0.00</span></div>
+          <button class="btn btn-primary btn-block" onclick="confirmOrder()">Confirm order</button>
+          <div class="form-msg" id="formMsg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="poster">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="step-label">For the shop window</div>
+        <h2>Scan to order</h2>
+        <p>Print this and put it in the window or on tables — it links straight to this ordering page.</p>
+      </div>
+    </div>
+    <div class="poster-wrap">
+      <div>
+        <div id="posterPrintArea" class="print-target">
+          <div class="poster">
+            <div class="tag">SPEAKEASY SMOKEHOUSE · SATURDAYS ONLY</div>
+            <h3>Scan to pre-order</h3>
+            <div class="poster-qr" id="siteQr"></div>
+            <div class="poster-foot">Pre-order online, collect at the window with your confirmation QR.</div>
+          </div>
+        </div>
+        <button class="btn btn-gold btn-block" style="margin-top:16px;" onclick="printOnly('posterPrintArea')">Print poster</button>
+        <button class="btn btn-ghost btn-block" style="margin-top:10px;" onclick="downloadQr({qrHolderId:'siteQr', filename:'speakeasy-smokehouse-poster-qr.png', heading:'Scan to pre-order', sub:'Saturdays only · collection at the window'})">Download QR (PNG)</button>
+      </div>
+      <div>
+        <p style="color:var(--text-muted); font-size:15px; max-width:42ch;">This code always points to this page, so it's safe to print once and reuse every week. Last orders Thursday — the smoker gets loaded Friday night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="promo">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="step-label">For Instagram, flyers &amp; stickers</div>
+        <h2>Promo QR code</h2>
+        <p>A smaller, sticker-sized code for your social bio, story graphics, business cards, or printed stickers — same link, different format.</p>
+      </div>
+    </div>
+    <div class="poster-wrap">
+      <div>
+        <div class="sticker-card" id="stickerPrintArea">
+          <div class="sticker-mark"></div>
+          <div class="tag">SPEAKEASY SMOKEHOUSE</div>
+          <h3>Scan for the menu</h3>
+          <div class="poster-qr" id="stickerQr"></div>
+          <div class="poster-foot">Saturdays only · pre-order online</div>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;">
+          <button class="btn btn-gold" onclick="downloadQr({qrHolderId:'stickerQr', filename:'speakeasy-smokehouse-sticker.png', heading:'Scan for the menu', sub:'Saturdays only · pre-order online'})">Download sticker (PNG)</button>
+          <button class="btn btn-ghost" onclick="copySiteLink()">Copy link</button>
+        </div>
+        <div class="form-msg" id="copyMsg" style="color:var(--text-muted);"></div>
+      </div>
+      <div>
+        <p style="color:var(--text-muted); font-size:15px; max-width:42ch;">Download the PNG and drop it straight onto a sticker template, a printed flyer, or a social media post — it exports at print resolution. It's the same destination as the window poster, just cropped square for feeds and labels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>Speakeasy Smokehouse — pork-free, every Saturday.</div>
+    <div>Questions? Reply to your confirmation email or message us on WhatsApp.</div>
+  </div>
+</footer>
+
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-card">
+    <div class="confirm-id" id="confirmIdTop">ORDER —</div>
+    <h3>You're on the list.</h3>
+    <div class="confirm-qr" id="confirmQr"></div>
+    <div class="confirm-detail" id="confirmDetail"></div>
+    <div class="confirm-actions" id="confirmActions"></div>
+    <div class="confirm-note">Show this QR code at the collection window on Saturday. Keep a copy on your phone or print it.</div>
+    <button class="btn btn-ghost btn-block confirm-close" onclick="closeConfirm()">Close</button>
+  </div>
+</div>
+
+<script>
+/* ---------------- Shop contact ---------------- */
+const SHOP_WHATSAPP = '447956184463'; // shop notification number
+
+/* ---------------- Menu data (from the shop's printed menu) ---------------- */
+const MAINS = [
+  {id:'brisket', name:'Smoked Beef Brisket', unit:'per 100g', price:9.50},
+  {id:'chicken_thighs', name:'BBQ Chicken Thighs', unit:'2 pieces', price:7.00},
+  {id:'short_rib', name:'Short Rib', unit:'individual', price:11.50},
+  {id:'burnt_ends', name:'Brisket Burnt Ends', unit:'per 100g', price:7.00},
+  {id:'hot_links', name:'Beef Hot Links', unit:'2 pieces', price:6.00},
+  {id:'lamb_chops', name:'Grilled Lamb Chops', unit:'3 pieces', price:12.50},
+  {id:'jerk_chicken', name:'Smoked Jerk Chicken Breast', unit:'', price:8.00},
+  {id:'wings', name:'BBQ Wings', unit:'6 pieces', price:6.50},
+];
+const SIDES = [
+  {id:'corn', name:'Corn on the Cob', unit:'BBQ butter', price:3.00},
+  {id:'mash', name:'Creamy Mash Potato', unit:'herbs & garlic', price:4.00},
+  {id:'slaw', name:'Coleslaw', unit:'', price:2.50},
+  {id:'beans', name:'BBQ Baked Beans', unit:'', price:3.00},
+  {id:'cornbread', name:'Cornbread', unit:'2 slices', price:3.50},
+  {id:'fries', name:'Loaded Fries', unit:'cheese, spring onion', price:4.50},
+];
+const SAUCES = [
+  {id:'bbq_sauce', name:'Smoky BBQ Sauce', price:0.50},
+  {id:'chipotle', name:'Chipotle Mayo', price:0.50},
+  {id:'bourbon_bbq', name:'Bourbon BBQ Sauce', price:0.75},
+  {id:'espresso_bbq', name:'Espresso BBQ Sauce', price:0.75},
+  {id:'pickles', name:'Pickles', price:1.00},
+];
+
+const BOXES = [
+  {id:'solo', name:'Solo Box', mains:1, sides:2, sauces:1, price:11.50, desc:'1 main, 2 sides and a sauce of your choice.'},
+  {id:'duo', name:'Duo Box', mains:2, sides:3, sauces:2, price:21.00, desc:'2 mains, 3 sides and 2 sauces — built for two.'},
+  {id:'family', name:'Family Box', mains:4, sides:4, sauces:2, freeSideId:'cornbread', serves:'Serves 4', price:42.00, desc:'4 mains, 4 sides and 2 sauces, plus a free cornbread.'},
+  {id:'kids', name:'Kids Box', fixed:true, price:6.50, desc:'A smaller plate, sized for smaller appetites.', fixedItems:['Mini Chicken Thigh','Fries','Corn on the Cob']},
+];
+
+const PLATTERS = [
+  {id:'meatfeast', name:'Meat Feast', serves:'Serves 3–4', price:38.00,
+    fixedMains:['Brisket (300g)','BBQ Chicken Thighs','Short Rib','Brisket Burnt Ends (200g)','Beef Hot Links (200g)'],
+    fixedSides:['Cornbread','Pickles']},
+  {id:'landsea', name:'Land & Sea Sharer', serves:'Serves 2', price:27.00,
+    fixedMains:['Grilled Lamb Chops','Smoked Jerk Chicken Breast','Grilled Fish Fillet'],
+    fixedSides:['Corn on the Cob','Coleslaw']},
+  {id:'ultimate', name:'Ultimate Sharer', serves:'Serves 5–6', price:64.00,
+    fixedMains:['Brisket (500g)','Short Rib','BBQ Chicken Thighs','Grilled Lamb Chops','Brisket Burnt Ends (300g)','Beef Hot Links (300g)'],
+    fixedSides:[], sideCount:3, sideNote:'Choose 3 sides'},
+];
+
+/* ---------------- State ---------------- */
+let cart = [];
+let builderMode = 'box';
+let activeBoxType = BOXES[0].id;
+let activePlatterType = PLATTERS[0].id;
+let currentBox = null;
+let currentPlatter = null;
+let contactPref = 'email';
+
+function money(n){ return '£' + n.toFixed(2); }
+
+function newCurrentBox(boxTypeId){
+  currentBox = { boxId: boxTypeId, mains: [], sides: [], sauces: [], qty: 1 };
+}
+function newCurrentPlatter(platterTypeId){
+  currentPlatter = { platterId: platterTypeId, sides: [], qty: 1 };
+}
+newCurrentBox(activeBoxType);
+newCurrentPlatter(activePlatterType);
+
+/* ---------------- Menu reference lists ---------------- */
+function renderMenuLists(){
+  document.getElementById('mainList').innerHTML = MAINS.map(m=>`
+    <div class="menu-row">
+      <div><div class="name">${m.name}</div>${m.unit?`<div class="desc">${m.unit}</div>`:''}</div>
+      <div class="price">${money(m.price)}</div>
+    </div>`).join('');
+  document.getElementById('sideList').innerHTML = SIDES.map(s=>`
+    <div class="menu-row">
+      <div><div class="name">${s.name}</div>${s.unit?`<div class="desc">${s.unit}</div>`:''}</div>
+      <div class="price">${money(s.price)}</div>
+    </div>`).join('');
+  document.getElementById('sauceList').innerHTML = SAUCES.map(x=>`
+    <div class="menu-row">
+      <div><div class="name">${x.name}</div></div>
+      <div class="price">${money(x.price)}</div>
+    </div>`).join('');
+}
+
+/* ---------------- Mode switch ---------------- */
+function switchMode(mode){
+  builderMode = mode;
+  document.getElementById('modeBoxBtn').classList.toggle('active', mode==='box');
+  document.getElementById('modePlatterBtn').classList.toggle('active', mode==='platter');
+  document.getElementById('boxMode').style.display = mode==='box' ? '' : 'none';
+  document.getElementById('platterMode').style.display = mode==='platter' ? '' : 'none';
+}
+
+/* ---------------- Box builder ---------------- */
+function renderBoxTabs(){
+  document.getElementById('boxTabs').innerHTML = BOXES.map(b=>`
+    <div class="box-tab ${b.id===activeBoxType?'active':''}" onclick="switchBoxType('${b.id}')">${b.name}</div>
+  `).join('');
+}
+function switchBoxType(id){
+  activeBoxType = id;
+  newCurrentBox(id);
+  renderBoxTabs();
+  renderBoxEditor();
+}
+function toggleBoxMain(id){
+  const box = BOXES.find(b=>b.id===activeBoxType);
+  const idx = currentBox.mains.indexOf(id);
+  if(idx>-1){ currentBox.mains.splice(idx,1); }
+  else if(currentBox.mains.length < box.mains){ currentBox.mains.push(id); }
+  renderBoxEditor();
+}
+function toggleBoxSide(id){
+  const box = BOXES.find(b=>b.id===activeBoxType);
+  const idx = currentBox.sides.indexOf(id);
+  if(idx>-1){ currentBox.sides.splice(idx,1); }
+  else if(currentBox.sides.length < box.sides){ currentBox.sides.push(id); }
+  renderBoxEditor();
+}
+function toggleBoxSauce(id){
+  const box = BOXES.find(b=>b.id===activeBoxType);
+  const idx = currentBox.sauces.indexOf(id);
+  if(idx>-1){ currentBox.sauces.splice(idx,1); }
+  else if(currentBox.sauces.length < box.sauces){ currentBox.sauces.push(id); }
+  renderBoxEditor();
+}
+function changeBoxQty(delta){
+  currentBox.qty = Math.max(1, currentBox.qty + delta);
+  renderBoxEditor();
+}
+
+function renderBoxEditor(){
+  const box = BOXES.find(b=>b.id===activeBoxType);
+
+  if(box.fixed){
+    document.getElementById('boxEditor').innerHTML = `
+      <div class="box-editor-head">
+        <div><h3>${box.name}</h3></div>
+        <div class="box-price">${money(box.price)}</div>
+      </div>
+      <div class="box-editor-desc">${box.desc}</div>
+      <ul class="fixed-list">${box.fixedItems.map(i=>`<li>${i}</li>`).join('')}</ul>
+      <div class="qty-row">
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeBoxQty(-1)">−</button>
+          <span class="qty-num">${currentBox.qty}</span>
+          <button class="qty-btn" onclick="changeBoxQty(1)">+</button>
+        </div>
+        <button class="btn btn-primary" onclick="addBoxToCart()">Add box · ${money(box.price*currentBox.qty)}</button>
+      </div>
+    `;
+    return;
+  }
+
+  const mainFull = currentBox.mains.length >= box.mains;
+  const sideFull = currentBox.sides.length >= box.sides;
+  const sauceFull = currentBox.sauces.length >= box.sauces;
+  const sidePool = box.freeSideId ? SIDES.filter(s=>s.id!==box.freeSideId) : SIDES;
+
+  const mainItems = MAINS.map(m=>{
+    const selected = currentBox.mains.includes(m.id);
+    const disabled = !selected && mainFull;
+    return `<div class="pick-item ${selected?'selected':''} ${disabled?'disabled':''}" onclick="${disabled?'':`toggleBoxMain('${m.id}')`}">
+      <span class="pick-check"></span><span>${m.name}</span>
+    </div>`;
+  }).join('');
+
+  const sideItems = sidePool.map(s=>{
+    const selected = currentBox.sides.includes(s.id);
+    const disabled = !selected && sideFull;
+    return `<div class="pick-item ${selected?'selected':''} ${disabled?'disabled':''}" onclick="${disabled?'':`toggleBoxSide('${s.id}')`}">
+      <span class="pick-check"></span><span>${s.name}</span>
+    </div>`;
+  }).join('');
+
+  const sauceItems = SAUCES.map(x=>{
+    const selected = currentBox.sauces.includes(x.id);
+    const disabled = !selected && sauceFull;
+    return `<div class="pick-item ${selected?'selected':''} ${disabled?'disabled':''}" onclick="${disabled?'':`toggleBoxSauce('${x.id}')`}">
+      <span class="pick-check"></span><span>${x.name}</span>
+    </div>`;
+  }).join('');
+
+  const canAdd = mainFull && sideFull && sauceFull;
+
+  document.getElementById('boxEditor').innerHTML = `
+    <div class="box-editor-head">
+      <div>
+        <h3>${box.name}</h3>
+        ${box.serves?`<div class="serves">${box.serves}</div>`:''}
+      </div>
+      <div class="box-price">${money(box.price)}</div>
+    </div>
+    <div class="box-editor-desc">${box.desc}</div>
+
+    <div class="pick-group">
+      <div class="pick-group-title">
+        <h4>Choose ${box.mains} main${box.mains>1?'s':''}</h4>
+        <span class="pick-count ${mainFull?'full':''}">${currentBox.mains.length} / ${box.mains}</span>
+      </div>
+      <div class="pick-list">${mainItems}</div>
+    </div>
+
+    <div class="pick-group">
+      <div class="pick-group-title">
+        <h4>Choose ${box.sides} side${box.sides>1?'s':''}${box.freeSideId?' <span style="opacity:.6; font-weight:500;">(plus a free '+SIDES.find(s=>s.id===box.freeSideId).name+')</span>':''}</h4>
+        <span class="pick-count ${sideFull?'full':''}">${currentBox.sides.length} / ${box.sides}</span>
+      </div>
+      <div class="pick-list">${sideItems}</div>
+    </div>
+
+    <div class="pick-group">
+      <div class="pick-group-title">
+        <h4>Choose ${box.sauces} sauce${box.sauces>1?'s':''}/extra${box.sauces>1?'s':''}</h4>
+        <span class="pick-count ${sauceFull?'full':''}">${currentBox.sauces.length} / ${box.sauces}</span>
+      </div>
+      <div class="pick-list">${sauceItems}</div>
+    </div>
+
+    <div class="qty-row">
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeBoxQty(-1)">−</button>
+        <span class="qty-num">${currentBox.qty}</span>
+        <button class="qty-btn" onclick="changeBoxQty(1)">+</button>
+      </div>
+      <button class="btn btn-primary" onclick="addBoxToCart()" ${canAdd?'':'disabled'}>
+        Add box · ${money(box.price*currentBox.qty)}
+      </button>
+    </div>
+  `;
+}
+
+function addBoxToCart(){
+  const box = BOXES.find(b=>b.id===activeBoxType);
+  if(!box.fixed && (currentBox.mains.length!==box.mains || currentBox.sides.length!==box.sides || currentBox.sauces.length!==box.sauces)) return;
+  cart.push({ kind:'box', ...currentBox, boxId: activeBoxType });
+  newCurrentBox(activeBoxType);
+  renderBoxEditor();
+  renderTicket();
+}
+
+/* ---------------- Platter builder ---------------- */
+function renderPlatterTabs(){
+  document.getElementById('platterTabs').innerHTML = PLATTERS.map(p=>`
+    <div class="box-tab ${p.id===activePlatterType?'active':''}" onclick="switchPlatterType('${p.id}')">${p.name}</div>
+  `).join('');
+}
+function switchPlatterType(id){
+  activePlatterType = id;
+  newCurrentPlatter(id);
+  renderPlatterTabs();
+  renderPlatterEditor();
+}
+function togglePlatterSide(id){
+  const platter = PLATTERS.find(p=>p.id===activePlatterType);
+  const idx = currentPlatter.sides.indexOf(id);
+  if(idx>-1){ currentPlatter.sides.splice(idx,1); }
+  else if(currentPlatter.sides.length < platter.sideCount){ currentPlatter.sides.push(id); }
+  renderPlatterEditor();
+}
+function changePlatterQty(delta){
+  currentPlatter.qty = Math.max(1, currentPlatter.qty + delta);
+  renderPlatterEditor();
+}
+
+function renderPlatterEditor(){
+  const platter = PLATTERS.find(p=>p.id===activePlatterType);
+  const needsSides = !!platter.sideCount;
+  const sideFull = needsSides ? currentPlatter.sides.length >= platter.sideCount : true;
+
+  let sidePickHtml = '';
+  if(needsSides){
+    const sideItems = SIDES.map(s=>{
+      const selected = currentPlatter.sides.includes(s.id);
+      const disabled = !selected && sideFull;
+      return `<div class="pick-item ${selected?'selected':''} ${disabled?'disabled':''}" onclick="${disabled?'':`togglePlatterSide('${s.id}')`}">
+        <span class="pick-check"></span><span>${s.name}</span>
+      </div>`;
+    }).join('');
+    sidePickHtml = `
+      <div class="pick-group">
+        <div class="pick-group-title">
+          <h4>${platter.sideNote}</h4>
+          <span class="pick-count ${sideFull?'full':''}">${currentPlatter.sides.length} / ${platter.sideCount}</span>
+        </div>
+        <div class="pick-list">${sideItems}</div>
+      </div>
+    `;
+  }
+
+  const fixedSidesHtml = platter.fixedSides.length ? `<ul class="fixed-list">${platter.fixedSides.map(i=>`<li>${i}</li>`).join('')}</ul>` : '';
+
+  document.getElementById('platterEditor').innerHTML = `
+    <div class="box-editor-head">
+      <div>
+        <h3>${platter.name}</h3>
+        <div class="serves">${platter.serves}</div>
+      </div>
+      <div class="box-price">${money(platter.price)}</div>
+    </div>
+    <ul class="fixed-list">${platter.fixedMains.map(i=>`<li>${i}</li>`).join('')}</ul>
+    ${fixedSidesHtml}
+    ${sidePickHtml}
+    <div class="qty-row">
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changePlatterQty(-1)">−</button>
+        <span class="qty-num">${currentPlatter.qty}</span>
+        <button class="qty-btn" onclick="changePlatterQty(1)">+</button>
+      </div>
+      <button class="btn btn-primary" onclick="addPlatterToCart()" ${sideFull?'':'disabled'}>
+        Add platter · ${money(platter.price*currentPlatter.qty)}
+      </button>
+    </div>
+  `;
+}
+
+function addPlatterToCart(){
+  const platter = PLATTERS.find(p=>p.id===activePlatterType);
+  if(platter.sideCount && currentPlatter.sides.length!==platter.sideCount) return;
+  cart.push({ kind:'platter', ...currentPlatter, platterId: activePlatterType });
+  newCurrentPlatter(activePlatterType);
+  renderPlatterEditor();
+  renderTicket();
+}
+
+/* ---------------- Cart / ticket (shared) ---------------- */
+function removeFromCart(idx){
+  cart.splice(idx,1);
+  renderTicket();
+  renderCheckoutSummary();
+}
+
+function lineTotal(item){
+  if(item.kind==='box'){
+    const box = BOXES.find(b=>b.id===item.boxId);
+    return box.price * item.qty;
+  } else {
+    const platter = PLATTERS.find(p=>p.id===item.platterId);
+    return platter.price * item.qty;
+  }
+}
+function cartTotal(){
+  return cart.reduce((sum,item)=> sum + lineTotal(item), 0);
+}
+
+function describeLine(item){
+  if(item.kind==='box'){
+    const box = BOXES.find(b=>b.id===item.boxId);
+    if(box.fixed){
+      return { title: `${item.qty} × ${box.name}`, detail: box.fixedItems.join(', ') };
+    }
+    const mainNames = item.mains.map(id=>MAINS.find(m=>m.id===id).name).join(', ');
+    const sideNames = item.sides.map(id=>SIDES.find(s=>s.id===id).name).join(', ');
+    const sauceNames = item.sauces.map(id=>SAUCES.find(s=>s.id===id).name).join(', ');
+    let detail = `Main: ${mainNames}<br>Sides: ${sideNames}${box.freeSideId?` + ${SIDES.find(s=>s.id===box.freeSideId).name} (free)`:''}<br>Sauce: ${sauceNames}`;
+    return { title: `${item.qty} × ${box.name}`, detail };
+  } else {
+    const platter = PLATTERS.find(p=>p.id===item.platterId);
+    let sideBit = platter.fixedSides.join(', ');
+    if(platter.sideCount){
+      sideBit = item.sides.map(id=>SIDES.find(s=>s.id===id).name).join(', ');
+    }
+    const detail = `${platter.fixedMains.join(', ')}${sideBit?'<br>Sides: '+sideBit:''}`;
+    return { title: `${item.qty} × ${platter.name}`, detail };
+  }
+}
+
+function renderTicket(){
+  const body = document.getElementById('ticketBody');
+  if(cart.length===0){
+    body.innerHTML = '<div class="ticket-empty">Nothing added yet — build a box or add a platter.</div>';
+  } else {
+    body.innerHTML = cart.map((item,idx)=>{
+      const {title, detail} = describeLine(item);
+      return `<div class="ticket-line">
+        <div class="ticket-line-top"><span>${title}</span><span>${money(lineTotal(item))}</span></div>
+        <div class="ticket-line-items">${detail}</div>
+        <div class="ticket-line-actions"><button onclick="removeFromCart(${idx})">Remove</button></div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('ticketTotal').textContent = money(cartTotal());
+  document.getElementById('toCheckoutBtn').disabled = cart.length===0;
+}
+
+function goToCheckout(){
+  renderCheckoutSummary();
+  document.getElementById('checkout').scrollIntoView({behavior:'smooth'});
+}
+
+function renderCheckoutSummary(){
+  const el = document.getElementById('checkoutSummary');
+  if(cart.length===0){
+    el.innerHTML = '<div class="ticket-empty">Your order is empty.</div>';
+  } else {
+    el.innerHTML = cart.map(item=>{
+      const {title, detail} = describeLine(item);
+      return `<div class="ticket-line">
+        <div class="ticket-line-top"><span>${title}</span></div>
+        <div class="ticket-line-items">${detail}</div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('checkoutTotal').textContent = money(cartTotal());
+}
+
+/* ---------------- Checkout / confirm ---------------- */
+function clearFieldErrors(){
+  ['f-name','f-phone','f-email','f-slot'].forEach(id=>{
+    const f = document.getElementById(id);
+    f.classList.remove('invalid');
+    f.querySelector('.field-error').textContent='';
+  });
+  document.getElementById('formMsg').textContent='';
+}
+function setFieldError(id,msg){
+  const f = document.getElementById(id);
+  f.classList.add('invalid');
+  f.querySelector('.field-error').textContent = msg;
+}
+
+function validate(){
+  clearFieldErrors();
+  let ok = true;
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const slot = document.getElementById('pickupSlot').value;
+
+  if(cart.length===0){
+    document.getElementById('formMsg').textContent = 'Add at least one box or platter before confirming.';
+    ok = false;
+  }
+  if(!name){ setFieldError('f-name','Enter your name'); ok=false; }
+  if(!phone){ setFieldError('f-phone','Needed so we can reach you about your order'); ok=false; }
+  if(!slot){ setFieldError('f-slot','Choose a pickup slot'); ok=false; }
+  return ok;
+}
+
+function makeOrderId(){
+  const d = new Date();
+  const stamp = d.getFullYear().toString().slice(2) + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+  const rand = Math.random().toString(36).slice(2,6).toUpperCase();
+  return `SS-${stamp}-${rand}`;
+}
+
+function qrSafeText(str){
+  return String(str)
+    .replace(/[\u2010-\u2015]/g, '-')   // en/em dashes -> hyphen
+    .replace(/£/g, 'GBP ')
+    .replace(/[^\x00-\x7F]/g, '');      // strip any other non-ASCII as a safety net
+}
+
+let lastOrder = null;
+
+function confirmOrder(){
+  if(!validate()) return;
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const email = document.getElementById('custEmail').value.trim();
+  const slot = document.getElementById('pickupSlot').value;
+  const notes = document.getElementById('custNotes').value.trim();
+  const orderId = makeOrderId();
+
+  const itemLines = cart.map(item=>{
+    const {title, detail} = describeLine(item);
+    return `${title} — ${detail.replace(/<br>/g,' / ')}`;
+  });
+
+  lastOrder = { orderId, name, phone, email, slot, notes, total: cartTotal(), itemLines, contactPref };
+
+  document.getElementById('confirmIdTop').textContent = 'ORDER ' + orderId;
+  document.getElementById('confirmDetail').innerHTML = `
+    <strong>${name}</strong><br>
+    Pickup: <strong>Saturday, ${slot}</strong><br>
+    ${itemLines.map(l=>'• '+l).join('<br>')}<br>
+    Total due at pickup: <strong>${money(cartTotal())}</strong>
+    ${notes ? '<br>Note: '+notes : ''}
+  `;
+
+  const qrPayload = `SPEAKEASY SMOKEHOUSE | Order ${orderId} | ${name} | Pickup Sat ${slot} | Total ${money(cartTotal())}`;
+  const qrHolder = document.getElementById('confirmQr');
+  qrHolder.innerHTML = '';
+  try{
+    new QRCode(qrHolder, { text: qrPayload, correctLevel: QRCode.CorrectLevel.L, width: 190, height: 190, colorDark:'#231C17', colorLight:'#ffffff' });
+  }catch(e){
+    qrHolder.innerHTML = '<div style="font-family:\'Space Mono\',monospace; font-size:13px; padding:20px; text-align:center;">ORDER ' + orderId + '</div>';
+  }
+
+  renderConfirmActions();
+
+  document.getElementById('confirmOverlay').classList.add('open');
+
+  cart = [];
+  renderTicket();
+  renderCheckoutSummary();
+}
+
+function renderConfirmActions(){
+  const el = document.getElementById('confirmActions');
+  const summaryText = `New order — Speakeasy Smokehouse\nOrder ${lastOrder.orderId}\nName: ${lastOrder.name}\nPhone: ${lastOrder.phone}\nPickup: Saturday ${lastOrder.slot}\n${lastOrder.itemLines.join('\n')}\nTotal: ${money(lastOrder.total)}${lastOrder.notes ? '\nNote: '+lastOrder.notes : ''}`;
+  const wa = `https://wa.me/${SHOP_WHATSAPP}?text=${encodeURIComponent(summaryText)}`;
+
+  let html = `<a class="btn btn-gold btn-block" href="${wa}" target="_blank" rel="noopener">Send order to us on WhatsApp</a>`;
+
+  if(lastOrder.email){
+    const copyText = `Your Speakeasy Smokehouse order ${lastOrder.orderId}\nPickup: Saturday ${lastOrder.slot}\n${lastOrder.itemLines.join('\n')}\nTotal due at pickup: ${money(lastOrder.total)}`;
+    const mailto = `mailto:${encodeURIComponent(lastOrder.email)}?subject=${encodeURIComponent('Your Speakeasy Smokehouse order '+lastOrder.orderId)}&body=${encodeURIComponent(copyText)}`;
+    html += `<a class="btn btn-ghost btn-block" href="${mailto}">Email me a copy</a>`;
+  }
+
+  el.innerHTML = html;
+}
+
+function closeConfirm(){
+  document.getElementById('confirmOverlay').classList.remove('open');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function printOnly(id){
+  document.querySelectorAll('.print-active').forEach(el=>el.classList.remove('print-active'));
+  const el = document.getElementById(id);
+  if(el){ el.classList.add('print-active'); }
+  window.print();
+  setTimeout(()=>{ if(el){ el.classList.remove('print-active'); } }, 500);
+}
+
+/* ---------------- Poster QR (self-referential) ---------------- */
+function renderSiteQr(){
+  try{
+    const holder = document.getElementById('siteQr');
+    const url = window.location.href.split('#')[0];
+    new QRCode(holder, { text: url, correctLevel: QRCode.CorrectLevel.L, width: 200, height: 200, colorDark:'#231C17', colorLight:'#ffffff' });
+  }catch(e){}
+}
+
+/* ---------------- Sticker / promo QR ---------------- */
+function renderStickerQr(){
+  try{
+    const holder = document.getElementById('stickerQr');
+    const url = window.location.href.split('#')[0];
+    new QRCode(holder, { text: url, correctLevel: QRCode.CorrectLevel.L, width: 170, height: 170, colorDark:'#231C17', colorLight:'#ffffff' });
+  }catch(e){}
+}
+
+/* ---------------- Menu-section QR pair ---------------- */
+function renderMenuQrs(){
+  const url = window.location.href.split('#')[0];
+  try{
+    new QRCode(document.getElementById('menuSiteQr'), { text: url, correctLevel: QRCode.CorrectLevel.L, width: 170, height: 170, colorDark:'#231C17', colorLight:'#ffffff' });
+  }catch(e){}
+}
+
+function copySiteLink(){
+  const url = window.location.href.split('#')[0];
+  const msg = document.getElementById('copyMsg');
+  navigator.clipboard.writeText(url).then(()=>{
+    msg.textContent = 'Link copied.';
+    setTimeout(()=>{ msg.textContent=''; }, 2500);
+  }).catch(()=>{
+    msg.textContent = url;
+  });
+}
+
+async function saveFile(filename, blob){
+  try{
+    if(!window.claude || !window.claude.use){
+      const msg = document.getElementById('copyMsg');
+      if(msg) msg.textContent = "Downloads aren't available in this view.";
+      return;
+    }
+    const downloads = await window.claude.use('downloads');
+    if(!downloads){
+      const msg = document.getElementById('copyMsg');
+      if(msg) msg.textContent = "Downloads aren't available in this view.";
+      return;
+    }
+    await downloads.save({ filename, data: blob });
+  }catch(e){
+    const msg = document.getElementById('copyMsg');
+    if(msg && e && e.code !== 'declined') msg.textContent = "Couldn't save the file — try again.";
+  }
+}
+
+function downloadQr({qrHolderId, filename, heading, sub}){
+  const qrImg = document.querySelector('#'+qrHolderId+' img');
+  if(!qrImg){ return; }
+  const img = new Image();
+  img.onload = function(){
+    const size = 900;
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = Math.round(size * 1.25);
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#1B1714';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    const pad = 40;
+    ctx.fillStyle = '#F1E9D8';
+    roundRect(ctx, pad, pad, canvas.width-pad*2, canvas.height-pad*2, 46);
+    ctx.fill();
+
+    const markR = 26;
+    const markY = pad + 74;
+    const grad = ctx.createLinearGradient(size/2-markR, markY-markR, size/2+markR, markY+markR);
+    grad.addColorStop(0, '#C43E1C');
+    grad.addColorStop(0.5, '#C8912B');
+    grad.addColorStop(1, '#C43E1C');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(size/2, markY, markR, 0, Math.PI*2);
+    ctx.fill();
+
+    ctx.fillStyle = '#C43E1C';
+    ctx.font = '700 22px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('SPEAKEASY SMOKEHOUSE', size/2, markY + 60);
+
+    ctx.fillStyle = '#231C17';
+    ctx.font = '800 44px sans-serif';
+    ctx.fillText(heading, size/2, markY + 120);
+
+    const qrSize = size - pad*2 - 160;
+    const qrX = (size - qrSize)/2;
+    const qrY = markY + 160;
+    ctx.drawImage(img, qrX, qrY, qrSize, qrSize);
+
+    ctx.fillStyle = '#5b4f43';
+    ctx.font = '600 26px sans-serif';
+    ctx.fillText(sub, size/2, qrY + qrSize + 50);
+
+    canvas.toBlob(function(blob){
+      if(!blob) return;
+      saveFile(filename, blob);
+    }, 'image/png');
+  };
+  img.src = qrImg.src;
+}
+
+function roundRect(ctx, x, y, w, h, r){
+  ctx.beginPath();
+  ctx.moveTo(x+r, y);
+  ctx.arcTo(x+w, y, x+w, y+h, r);
+  ctx.arcTo(x+w, y+h, x, y+h, r);
+  ctx.arcTo(x, y+h, x, y, r);
+  ctx.arcTo(x, y, x+w, y, r);
+  ctx.closePath();
+}
+
+/* ---------------- Upcoming Saturday label ---------------- */
+function renderHeroDate(){
+  const d = new Date();
+  const day = d.getDay();
+  const diff = (6 - day + 7) % 7;
+  const nextSat = new Date(d);
+  nextSat.setDate(d.getDate() + (diff===0 ? 0 : diff));
+  const opts = { weekday:'long', month:'long', day:'numeric' };
+  document.getElementById('heroDate').textContent = nextSat.toLocaleDateString('en-GB', opts);
+}
+
+/* ---------------- Init ---------------- */
+renderMenuLists();
+renderBoxTabs();
+renderBoxEditor();
+renderPlatterTabs();
+renderPlatterEditor();
+renderTicket();
+renderHeroDate();
+renderSiteQr();
+renderStickerQr();
+renderMenuQrs();
+</script>
+</body>
+</html>
