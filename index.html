@@ -205,8 +205,8 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   #menu .deco-frame .corner-bl{ bottom:-3px; left:-3px; transform:rotate(-90deg); }
   #menu .deco-frame .corner-br{ bottom:-3px; right:-3px; transform:rotate(180deg); }
 
-  .menu-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
-  @media (max-width:940px){ .menu-grid{ grid-template-columns:1fr 1fr; } }
+  .menu-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  @media (max-width:1100px){ .menu-grid{ grid-template-columns:1fr 1fr; } }
   @media (max-width:640px){ .menu-grid{ grid-template-columns:1fr; } }
   .menu-panel{
     background:linear-gradient(180deg, var(--deco-emerald-light), var(--deco-emerald));
@@ -472,6 +472,11 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
           <div class="note">Add to any box or platter</div>
           <div id="sauceList"></div>
         </div>
+        <div class="menu-panel">
+          <h3>Drinks</h3>
+          <div class="note">Ice cold, RRP</div>
+          <div id="drinkList"></div>
+        </div>
       </div>
     </div>
 
@@ -694,6 +699,7 @@ const MAINS = [
   {id:'lamb_chops', name:'Grilled Lamb Chops', unit:'3 pieces', price:12.50},
   {id:'jerk_chicken', name:'Smoked Jerk Chicken Breast', unit:'', price:8.00},
   {id:'wings', name:'BBQ Wings', unit:'6 pieces', price:6.50},
+  {id:'fish_fillet', name:'Grilled Fish Fillet', unit:'', price:9.00},
 ];
 const SIDES = [
   {id:'corn', name:'Corn on the Cob', unit:'BBQ butter', price:3.00},
@@ -709,6 +715,14 @@ const SAUCES = [
   {id:'bourbon_bbq', name:'Bourbon BBQ Sauce', price:0.75},
   {id:'espresso_bbq', name:'Espresso BBQ Sauce', price:0.75},
   {id:'pickles', name:'Pickles', price:1.00},
+];
+const DRINKS = [
+  {id:'coke', name:'Coca-Cola', unit:'330ml can', price:1.50},
+  {id:'diet_coke', name:'Diet Coke', unit:'330ml can', price:1.50},
+  {id:'sprite', name:'Sprite', unit:'330ml can', price:1.50},
+  {id:'fanta', name:'Fanta Orange', unit:'330ml can', price:1.50},
+  {id:'water_still', name:'Still Water', unit:'500ml', price:1.20},
+  {id:'water_sparkling', name:'Sparkling Water', unit:'500ml', price:1.20},
 ];
 
 const BOXES = [
@@ -766,6 +780,11 @@ function renderMenuLists(){
     <div class="menu-row">
       <div><div class="name">${x.name}</div></div>
       <div class="price">${money(x.price)}</div>
+    </div>`).join('');
+  document.getElementById('drinkList').innerHTML = DRINKS.map(d=>`
+    <div class="menu-row">
+      <div><div class="name">${d.name}</div>${d.unit?`<div class="desc">${d.unit}</div>`:''}</div>
+      <div class="price">${money(d.price)}</div>
     </div>`).join('');
 }
 
